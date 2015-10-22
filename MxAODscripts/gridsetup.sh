@@ -1,0 +1,4 @@
+setupATLAS
+localSetupFAX
+rcSetup
+localSetupPandaClient --noAthenaCheck

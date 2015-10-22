@@ -1,0 +1,3 @@
+rm -r -f MyAnalysis_201*
+runMyAnalysis MyAnalysis.cfg
+mv MyAnalysis_2015* MyAnalysis_2015

@@ -1,0 +1,33 @@
+#!/bin/bash
+#rm -r -f MxAOD
+mkdir MxAOD_DATA_v69 
+cd MxAOD_DATA_v69
+mkdir packages run
+cd packages
+#set -e
+ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+#localSetupFAX
+#localSetupPandaClient --noAthenaCheck
+rcSetup Base,2.3.26
+#rcSetup Base,2.3.31
+
+rc checkout_pkg atlasoff/PhysicsAnalysis/HiggsPhys/Run2/HGamma/xAOD/HGamAnalysisFramework/tags/HGamAnalysisFramework-00-02-26-05
+#rc checkout_pkg atlasoff/PhysicsAnalysis/HiggsPhys/Run2/HGamma/xAOD/HGamAnalysisFramework/trunk/ HGamAnalysisFramework
+./HGamAnalysisFramework/scripts/setupRelease 
+rc checkout_pkg atlasoff/PhysicsAnalysis/HiggsPhys/Run2/HGamma/xAOD/HGamTools/tags/HGamTools-00-00-19-02 HGamTools
+#rc checkout_pkg atlasoff/PhysicsAnalysis/HiggsPhys/Run2/HGamma/xAOD/HGamTools/trunk/ HGamTools
+rc find_packages
+rc compile
+#rc make_skeleton TestPackage
+#$ROOTCOREBIN/user_scripts/HGamAnalysisFramework/make_skeleton TestPackage MyAnalysis
+#cp ~/scripts/DxAODscripts/MyAnalysis.cxx TestPackage/Root/
+#rc find_packages 
+#rc compile
+cd ..
+cd run
+cp ~/scripts/MxAODscripts/nohupsubmitMxAOD* .
+cp ~/scripts/MxAODscripts/submitMxAOD.sh .
+#cp ~/scripts/MxAODscripts/MxAODgridSubmission.py .
+#cp ~/scripts/MxAODscripts/inputFiles.txt .
+#./MxAODgridSubmission.py

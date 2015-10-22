@@ -1,0 +1,8 @@
+#!/bin/bash
+ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+localSetupFAX
+rcSetup Base,2.3.16
+localSetupPandaClient --noAthenaCheck
+cd Run/
+./MxAODgridSubmission.py

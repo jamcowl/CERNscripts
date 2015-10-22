@@ -1,0 +1,1 @@
+/cvmfs/atlas.cern.ch/repo/sw/ASG/AnalysisBase/2.3.31/RootCore/internal/local_setup.csh
