@@ -1,4 +1,0 @@
-user.athompso.Sherpa_gamjet_35-70_CVetoBVeto.MxAOD.p2419.h008_7_MxAOD.root
-user.athompso.data15_13TeV.00279867.physics_Main.MxAOD._p242.h008_6
-user.athompso.data15_13TeV.00271421.physics_Main.MxAOD.p2419.h008_4
-user.athompso.Pythia8_JF35_50ns.MxAOD.p2419.h008

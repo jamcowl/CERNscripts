@@ -15,4 +15,4 @@ setupATLAS
 localSetupRucioClients
 rcSetup
 
-source saveMxAODsToEOS.sh $datasetNames > datah008_7.out
+source saveMxAODsToEOS.sh $datasetNames 

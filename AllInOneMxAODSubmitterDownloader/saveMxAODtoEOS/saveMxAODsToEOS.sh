@@ -26,7 +26,10 @@
 htag="h008"
 
 #EOSdir=/afs/cern.ch/user/a/athompso/eos/atlas/atlasgroupdisk/phys-higgs/HSG1/MxAOD/h008
-EOSdir=root://eosatlas.cern.ch//eos/atlas/atlasgroupdisk/phys-higgs/HSG1/MxAOD/$htag
+#EOSdir=root://eosatlas.cern.ch//eos/atlas/atlasgroupdisk/phys-higgs/HSG1/MxAOD/$htag
+#EOSdir=root://eosatlas.cern.ch//eos/atlas/atlascerngroupdisk/phys-higgs/HSG1/MxAOD/$htag
+EOSdir=root://eosatlas.cern.ch//eos/atlas/atlascerngroupdisk/phys-higgs/HSG1/MxAOD/${htag}_stage
+
 EOSdirAllSys=$EOSdir/MxAODAllSys
 EOSdirMC25ns=$EOSdir/mc_25ns
 EOSdirMC50ns=$EOSdir/mc_50ns

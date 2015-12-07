@@ -11,11 +11,8 @@ pbookOutputFile=out.out
 #quit()" | pbook > $pbookOutputFile
 flag=$((0))
 while [ $flag -eq 0 ]; do 
-  proxyInfo=$(voms-proxy-info |& grep "Proxy not found")
-  [ ! -z "$proxyInfo" ] && echo "8Twmp224tony" | voms-proxy-init -voms atlas
 
   pbookOutput=$(pbook <<< $'show()\nquit()\n' > $pbookOutputFile)
-  #[ ! -z "$pbookOutput" ] && echo "8Twmp224tony" | voms-proxy-init -voms atlas
   flag=$((1))
   count=$((0))
   echo ====================================================
@@ -53,14 +50,5 @@ echo $count jobs not done! Sleeping 30mins...
 done
 
 echo Jk, All Jobs done!
-
-
-#jobstatus=$(grep -B 10 "\-\-outDS=user.athompso.Sherpa_gamjet_4000_CFilterBVeto.MxAOD.p2419.h008_1" out.out | \
-#  grep "taskStatus" | awk '{print $3}')
-#echo $jobstatus
-#if [ $jobstatus == broken ]; then
-#    echo TRUEBRO
-#fi
-
 
 
