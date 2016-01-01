@@ -26,7 +26,7 @@ while [ $flag -eq 0 ]; do
         grep "taskStatus" | awk '{print $3}')
       #echo $jobstatus
       # need to set jobstatus to something to avoid errors if dataset not found
-      [ -z "$jobstatus" ] && jobstatus=UNKNOWN #&& echo "8Twmp224tony" | voms-proxy-init -voms atlas 
+      [ -z "$jobstatus" ] && jobstatus=UNKNOWN 
       #echo $jobstatus
   #    if [ $jobstatus == broken ]; then
   #        echo $p >> brokenFiles.txt
