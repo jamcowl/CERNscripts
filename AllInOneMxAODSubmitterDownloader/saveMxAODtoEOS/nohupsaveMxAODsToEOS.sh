@@ -13,13 +13,13 @@ source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
 localSetupFAX
 localSetupRucioClients
 rcSetup -q
-echo "8Twmp224tony" | voms-proxy-init -voms atlas
+echo "GRIDPASS" | voms-proxy-init -voms atlas
 [[ -z $ROOTCOREBIN ]] && echo "you need to setup ROOTCORE!" && exit 1
 [[ -z $RUCIO_ACCOUNT ]] && echo "you need to setup RUCIO!" && exit 1
 
 rm output/*
 #function CheckAFS {
-#    `klist -s` && `kinit athompso@CERN.CH <<< "9Fkgb331"` && aklog
+#    `klist -s` && `kinit athompso@CERN.CH <<< "AFSPASS"` && aklog
 #
 #}
 
